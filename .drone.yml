@@ -36,11 +36,6 @@ steps:
       - develop
 
   - name: Recreate live testing
-    when:
-      event:
-        exclude:
-        - promote
-        - rollback
     image: alpine/curl:latest
     commands:
       - "curl -X POST https://docker.maki-it.corp/api/stacks/webhooks/534764f3-6427-4321-82e0-ebfefd4b2e3b"
