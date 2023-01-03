@@ -37,7 +37,7 @@ def getArguments():
 
     parser.add_argument("--run-once",
                         action="store_true", dest="runOnce", default=False,
-                        help="Only for debugging. Stops the loop in continuous mode.")
+                        help=parser.SUPPRESS)
 
     parser.add_argument("-g", "--generate",
                         action="store_true", dest="generateConfig", default=False,
